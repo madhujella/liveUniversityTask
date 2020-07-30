@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 3fr;
+}
+.main,
+.sidebar {
+    height: 100vh;
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card {
+    width: 80%;
+    padding: 22px;
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-align: center;
+    margin: 22px auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card .number {
+    display: inline-block;
+    float: left;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.card:hover,
+.pagination .prev:hover,
+.pagination .next:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.pagination .next,
+.pagination .prev {
+    cursor: pointer;
+    padding: 22px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: auto 20px;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    margin-top: 0;
+    transition: all 500ms ease-out;
+}
+
+.dropdown.show {
+    opacity: 1;
+    left: 50%;
+    z-index: 100;
+}
+
+.form-control {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    outline: none;
+    width: 100%;
+}
+
+.form-control:focus {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+label {
+    cursor: pointer;
+}
+
+.quantity-input {
+    margin-top: 10px;
+}
+
+.errorMsg {
+    font-size: 14px;
+    color: red;
+}
