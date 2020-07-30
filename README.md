@@ -1,4 +1,4 @@
 # liveUniversityTask
 
-### project folder -> `npm i`  `npm start` 
+### project folder -> `npm i` && `npm start` 
 ### goto (http://localhost:3000)
